@@ -1,9 +1,9 @@
 ---
-# tasks file for master
+ tasks file for master
 
-- shell: kubeadm reset
+  shell: kubeadm reset
 
-- shell: kubeadm init --pod-network-cidr=10.32.0.0/12 --apiserver-advertise-address=192.168.200.10 --token=b0f7b8.8d1767876297d85c
+- shell: kubeadm init --pod-network-cidr=10.32.0.0/12  --apiserver-advertise-address={{ ip_address }} --token=b0f7b8.8d1767876297d85c
 
 - pause:
     minutes: 5
